@@ -92,7 +92,7 @@ pipeline {
 
         stage('Wait for deployment in DEV env') {
             //TODO: Watch deployment until pod is in 'Running' state
-        	stpes {
+        	steps {
 		  script {
 		    openshift.withCluster() {
 		      openshift.withProject( "${DEV_PROJECT}" ) {
